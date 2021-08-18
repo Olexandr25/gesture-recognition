@@ -2,7 +2,7 @@ import { Finger, FingerCurl, FingerDirection } from '../FingerDescription';
 import GestureDescription from '../GestureDescription';
 
 
-// describe thumbs up gesture 👎
+// describe thumbs up gesture 👌
 const thumbsDownDescription = new GestureDescription('thumbs_down');
 
 // thumb:

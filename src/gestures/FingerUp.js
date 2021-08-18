@@ -10,8 +10,8 @@ const fingerUpDescription = new GestureDescription('finger_up');
 // - vertical up (best) or diagonal up left / right
 fingerUpDescription.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
 fingerUpDescription.addDirection(Finger.Thumb, FingerDirection.VerticalUp, 1.0);
-fingerUpDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalDownLeft, 0.5);
-fingerUpDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalDownRight, 0.5);
+fingerUpDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 0.5);
+fingerUpDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 0.5);
 
 // index:
 // - not curled
@@ -26,8 +26,7 @@ fingerUpDescription.addDirection(Finger.Index, FingerDirection.DiagonalUpRight, 
 // - horizontal left or right
 for(let finger of [Finger.Middle, Finger.Ring, Finger.Pinky]) {
   fingerUpDescription.addCurl(finger, FingerCurl.FullCurl, 1.0);
-  fingerUpDescription.addDirection(finger, FingerDirection.HorizontalLeft, 1.0);
-  fingerUpDescription.addDirection(finger, FingerDirection.HorizontalRight, 1.0);
+  fingerUpDescription.addDirection(finger, FingerDirection.VerticalUp, 1.0);
 }
 
 export default fingerUpDescription;

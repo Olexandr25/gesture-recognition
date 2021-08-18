@@ -11,7 +11,7 @@ const thumbsDownDescription = new GestureDescription('phone');
 thumbsDownDescription.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
 thumbsDownDescription.addDirection(Finger.Thumb, FingerDirection.VerticalDown, 1.0);
 thumbsDownDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalDownLeft, 0.5);
-thumbsDownDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalDownRight, 0.25);
+thumbsDownDescription.addDirection(Finger.Thumb, FingerDirection.DiagonalDownRight, 0.5);
 
 // all other fingers:
 // - curled

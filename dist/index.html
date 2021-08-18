@@ -85,7 +85,10 @@
       'victory': '✌🏻',
       'thumbs_down': '👎',
       'phone' : '🤙',
-      'finger_down': '👇'
+      'finger_down': '👇',
+      'finger_up': '👆',
+      'finger_left': '👈',
+      'finger_right': '👉'
     };
 
     async function main() {
@@ -112,7 +115,10 @@
         fp.Gestures.ThumbsUpGesture,
         fp.Gestures.ThumbsDownGesture,
         fp.Gestures.PhoneGesture,
-        fp.Gestures.FingerDownGesture
+        fp.Gestures.FingerDownGesture,
+        fp.Gestures.FingerUpGesture,
+        fp.Gestures.FingerLeftGesture,
+        fp.Gestures.FingerRightGesture
       ];
       const GE = new fp.GestureEstimator(knownGestures);
 

@@ -1,8 +1,6 @@
 import { Finger, FingerCurl, FingerDirection } from '../FingerDescription';
 import GestureDescription from '../GestureDescription';
 
-// ThumbsUp
-
 // describe thumbs up gesture 👍
 const thumbsUpDescription = new GestureDescription('thumbs_up');
 

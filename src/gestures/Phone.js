@@ -21,8 +21,6 @@ PhoneDescription.addDirection(Finger.Pinky, FingerDirection.HorizontalLeft, 0.5)
 PhoneDescription.addDirection(Finger.Pinky, FingerDirection.DiagonalUpRight, 0.5);
 PhoneDescription.addDirection(Finger.Pinky, FingerDirection.DiagonalDownRight, 0.5);
 
-
-
 // all other fingers:
 // - curled
 // - horizontal left or right

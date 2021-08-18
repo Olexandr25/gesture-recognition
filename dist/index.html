@@ -84,6 +84,7 @@
       'thumbs_up': '👍',
       'victory': '✌🏻',
       'thumbs_down': '👎',
+      'phone' : '🤙'
     };
 
     async function main() {
@@ -99,6 +100,7 @@
       // ✊
       // 🤟
       // 👌
+      // 🤙
       // 👆 👈 👉 👇
       // zoom
       // scroll
@@ -107,7 +109,8 @@
       const knownGestures = [
         fp.Gestures.VictoryGesture,
         fp.Gestures.ThumbsUpGesture,
-        fp.Gestures.ThumbsDownGesture
+        fp.Gestures.ThumbsDownGesture,
+        fp.Gestures.PhoneGesture
       ];
       const GE = new fp.GestureEstimator(knownGestures);
 

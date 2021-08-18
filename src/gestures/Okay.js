@@ -3,7 +3,7 @@ import GestureDescription from '../GestureDescription';
 
 
 // describe thumbs up gesture 👌
-const thumbsDownDescription = new GestureDescription('thumbs_down');
+const thumbsDownDescription = new GestureDescription('okay');
 
 // thumb:
 // - not curled

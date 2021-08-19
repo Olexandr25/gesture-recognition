@@ -30,3 +30,8 @@ for(let finger of [Finger.Middle, Finger.Ring, Finger.Pinky]) {
 }
 
 export default fingerRightDescription;
+
+
+git remote add origin https://github.com/Olexandr25/gesture-recognition.git
+git branch -M main
+git push -u origin main

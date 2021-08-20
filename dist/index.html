@@ -194,6 +194,7 @@
 
             resultLayer.innerText = gestureStrings[result.name];
             scrollWindow(result.name);
+            zoomWindow(result.name);
           }
         }
 
@@ -252,6 +253,22 @@
       }
     }
 
+
+    function zoom(x) {
+
+    }
+
+    size = 1;
+    function zoomWindow(x) {
+      if ('finger_left' == x) {
+      size -= 0.1;
+      document.body.style.zoom = size;
+    }
+      if ('finger_right' == x) {
+      size += 0.1;
+      document.body.style.zoom = size;
+    }
+  }
     window.addEventListener("DOMContentLoaded", () => {
 
       initCamera(

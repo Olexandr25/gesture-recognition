@@ -8,7 +8,7 @@ const OkayDescription = new GestureDescription('okay');
 // all fingers:
 // - curled
 // - vertical up
-for(let finger of [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
+for(let finger of [Finger.Middle, Finger.Ring, Finger.Pinky]) {
     OkayDescription.addCurl(finger, FingerCurl.FullCurl, 1.0);
     OkayDescription.addDirection(finger, FingerDirection.VerticalUp, 1.0);
   }

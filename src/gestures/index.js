@@ -10,6 +10,7 @@ import FingerDownGesture from './FingerDown';
 import FingerRightGesture from './FingerRight';
 import FingerLeftGesture from './FingerLeft';
 import ShakeHandGesture from './ShakeHand';
+import FingerIndexDown from './FingerIndexDown';
 
 export {
   VictoryGesture,
@@ -23,5 +24,6 @@ export {
   FingerDownGesture,
   FingerRightGesture,
   FingerLeftGesture,
-  ShakeHandGesture
+  ShakeHandGesture,
+  FingerIndexDown
 }

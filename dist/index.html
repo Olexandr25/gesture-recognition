@@ -119,7 +119,8 @@
       'finger_right': '👉',
       'fist' : '✊',
       'okay' : '👌',
-      'love_you' : '🤟'
+      'love_you' : '🤟',
+      'finger_index_down' : '🐶',
     };
 
     async function main() {
@@ -152,7 +153,8 @@
         fp.Gestures.FingerRightGesture,
         fp.Gestures.FistGesture,
         fp.Gestures.OkayGesture,
-        fp.Gestures.LoveYouGesture
+        fp.Gestures.LoveYouGesture,
+        fp.Gestures.FingerIndexDown,
       ];
       const GE = new fp.GestureEstimator(knownGestures);
 

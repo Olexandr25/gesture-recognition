@@ -260,12 +260,12 @@
 
     size = 1;
     function zoomWindow(x) {
-      if ('finger_left' == x) {
-      size -= 0.1;
+      if ('finger_left' == x && size > 0.5) {
+      size -= 0.05;
       document.body.style.zoom = size;
     }
-      if ('finger_right' == x) {
-      size += 0.1;
+      if ('finger_right' == x && size < 1.5) {
+      size += 0.05;
       document.body.style.zoom = size;
     }
   }

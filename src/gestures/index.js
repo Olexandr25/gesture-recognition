@@ -10,7 +10,11 @@ import FingerDownGesture from './FingerDown';
 import FingerRightGesture from './FingerRight';
 import FingerLeftGesture from './FingerLeft';
 import ShakeHandGesture from './ShakeHand';
-import FingerIndexDown from './FingerIndexDown';
+import TwoDown from './TwoDown';
+import ThreeDown from './ThreeDown';
+import FourDown from './FourDown';
+import FiveDown from './FiveDown';
+
 
 export {
   VictoryGesture,
@@ -25,5 +29,8 @@ export {
   FingerRightGesture,
   FingerLeftGesture,
   ShakeHandGesture,
-  FingerIndexDown
+  TwoDown,
+  ThreeDown,
+  FourDown,
+  FiveDown
 }

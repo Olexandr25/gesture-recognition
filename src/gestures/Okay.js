@@ -8,10 +8,7 @@ const OkayDescription = new GestureDescription('okay');
 // all fingers:
 // - curled
 // - vertical up
-for(let finger of [Finger.Middle, Finger.Ring, Finger.Pinky]) {
-    OkayDescription.addCurl(finger, FingerCurl.FullCurl, 1.0);
-    OkayDescription.addDirection(finger, FingerDirection.VerticalUp, 1.0);
-  }
+
   
 // thumb:
 // - half curled
@@ -30,7 +27,9 @@ OkayDescription.addDirection(Finger.Index, FingerDirection.DiagonalDownLeft, 0.5
 OkayDescription.addDirection(Finger.Index, FingerDirection.DiagonalDownRight, 0.5);
 
 
-
+// all other fingers:
+// - no curled
+// - vertical up
 OkayDescription.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1.0);
 OkayDescription.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 1.0);
 OkayDescription.addDirection(Finger.Pinky, FingerDirection.HorizontalLeft, 0.5);

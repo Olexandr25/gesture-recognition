@@ -62,7 +62,6 @@
     <video id="pose-video" class="layer" playsinline></video>
     <canvas id="pose-canvas" class="layer"></canvas>
     <div id="pose-result" class="layer"></div>
-    <div onscroll="scrollTo()"></div>
   </div>
   <h1>Text</h1>
   <h1>Text</h1>
@@ -110,11 +109,9 @@
 
     const gestureStrings = {
       'thumbs_up': '👍',
-      'victory': '✌🏻',
       'thumbs_down': '👎',
       'phone': '🤙',
       'finger_down': '👇',
-      'finger_up': '👆',
       'finger_left': '👈',
       'finger_right': '👉',
       'fist' : '✊',
@@ -124,6 +121,10 @@
       'three_down' : '🐱',
       'four_down' : '🦊',
       'five_down' : '🐸',
+      'one_up': '👆',
+      'two_up': '✌🏻',
+      'three_up': '🎲',
+      'four_up': '🎯'
     };
 
     async function main() {
@@ -134,24 +135,11 @@
 
       const resultLayer = document.querySelector("#pose-result");
 
-      // configure gesture estimator
-      // add "✌🏻" and "👍" as sample gestures
-      // ✊
-      // 🤟
-      // 👌
-      // 🤙
-      // 👆 👈 👉 👇
-      // zoom
-      // scroll
-      // layout
-      // 👋 - shake hand in left change left
       const knownGestures = [
-        fp.Gestures.VictoryGesture,
         fp.Gestures.ThumbsUpGesture,
         fp.Gestures.ThumbsDownGesture,
         fp.Gestures.PhoneGesture,
         fp.Gestures.FingerDownGesture,
-        fp.Gestures.FingerUpGesture,
         fp.Gestures.FingerLeftGesture,
         fp.Gestures.FingerRightGesture,
         fp.Gestures.FistGesture,
@@ -161,6 +149,11 @@
         fp.Gestures.ThreeDown,
         fp.Gestures.FourDown,
         fp.Gestures.FiveDown,
+        fp.Gestures.OneUpGesture,
+        fp.Gestures.TwoUpGesture,
+        fp.Gestures.ThreeUpGesture,
+        fp.Gestures.FourUpGesture,
+        fp.Gestures.FiveUpGesture
       ];
       const GE = new fp.GestureEstimator(knownGestures);
 

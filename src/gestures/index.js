@@ -18,7 +18,6 @@ import OneUpGesture from './OneUp';
 import TwoUpGesture from './TwoUp';
 import ThreeUpGesture from './ThreeUp';
 import FourUpGesture from './FourUp';
-import FiveUpGesture from './FiveUp';
 
 
 export {
@@ -39,6 +38,5 @@ export {
   OneUpGesture,
   TwoUpGesture,
   ThreeUpGesture,
-  FourUpGesture,
-  FiveUpGesture
+  FourUpGesture
 }

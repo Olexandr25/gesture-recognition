@@ -8,6 +8,12 @@ import FingerDownGesture from './FingerDown';
 import FingerRightGesture from './FingerRight';
 import FingerLeftGesture from './FingerLeft';
 import ShakeHandGesture from './ShakeHand';
+// Down gestures
+import TwoDown from './TwoDown';
+import ThreeDown from './ThreeDown';
+import FourDown from './FourDown';
+import FiveDown from './FiveDown';
+// Up gestures
 import OneUpGesture from './OneUp';
 import TwoUpGesture from './TwoUp';
 import ThreeUpGesture from './ThreeUp';
@@ -26,6 +32,10 @@ export {
   FingerRightGesture,
   FingerLeftGesture,
   ShakeHandGesture,
+  TwoDown,
+  ThreeDown,
+  FourDown,
+  FiveDown,
   OneUpGesture,
   TwoUpGesture,
   ThreeUpGesture,

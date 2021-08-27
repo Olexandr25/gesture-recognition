@@ -100,7 +100,7 @@ async function main() {
         scrollWindow(result.name);
         zoomWindow(result.name);
 
-        btnClicker(result.name);
+        // btnClicker(result.name);
       }
     }
 

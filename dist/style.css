@@ -1,84 +1,88 @@
-/* * {
-    box-sizing: border-box;
-    user-select: none;
-  }
-  html,
-  body {
-    width: 100%;
-    height: 100%; 
-    font-family: Arial, sans-serif;
-    background-color: #a5b0f3;
-    color: #ffffff;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  #video-container {
-    width: 640px;
-    height: 480px;
-    position: absolute;
-    right: 0;
-  }
-
-  .layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  #pose-video {
-    transform: scaleX(-1);
-  }
-
-  #pose-result {
-    font-size: 100px;
-    text-align: right;
-    padding: 20px 30px 0 0;
-  } */
-
-.bg-image-main{
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/gesture.jpg);  
-  background-size: cover;
-}
-.bg-color{
+/* video-container */
+html,
+body { 
   background-color: #242424;
 }
-
-html {
-  position: relative;
-  min-height: 100%;
+.div {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 2px;
 }
-
-body{
+.video-container {
+  width: 280px;
+  height: 240px;
+  position: absolute;
+  right: 0;
+  left: 85%;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pose-video {
+  transform: scaleX(-1);
+}
+.pose-result {
+  font-size: 70px;
+  text-align: right;
+  padding: 20px 30px 0 0;
+}
+/* content  */
+.page {
   height: 100vh;
 }
+.content {
+  flex: 1 0 auto;
+}
+.header, .footer {
+  flex: 0 0 auto;
+}
 header{
-  background: black;
+  width: 100%;
 }
 footer {
   left: 0;
   bottom: 0;
-  height: 50px;
   width: 100%;
 }
+.footer-content {
+  height: 50px;
+}
+/* additional config style  */
+.bg-color-main{
+background-color: #242424;
+}
+.bg-color-main-lighten{
+  background-color: #4e4e4e;
+  }
+.bg-color-transparent{
+background-color: rgba(0, 0, 0, 0.1); 
+border-radius: 5px;
+}
+.bg-image-main{
+background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/gesture.jpg);  
+background-size: cover;
+background-repeat: no-repeat;
+}
 .fs {
-  font-size: 75px;
+  font-size: 70px;
 } 
-.tx-shadow-sm {
+.tx-shadow {
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
-
+.p-4-extra {
+ padding: 29px;
+}
+/* additional components  */
 .btn {
   color: #242424;
-  border-radius: 5px;
+  border-radius: 70px;
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 70px;
 }
 .btn:focus {
   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.2);
@@ -86,8 +90,10 @@ footer {
 .btn:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
-.my-4-extra {
-  margin-top: 26px;
-  margin-bottom: 26px;
+.fractal_img {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
 }
+
+

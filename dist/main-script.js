@@ -99,8 +99,6 @@ async function main() {
         resultLayer.innerText = gestureStrings[result.name];
         scrollWindow(result.name);
         zoomWindow(result.name);
-
-        // btnClicker(result.name);
       }
     }
 
@@ -148,22 +146,6 @@ function drawPoint(ctx, x, y, r, color) {
   ctx.fillStyle = color;
   ctx.fill();
 }
-
-// let count = 0;
-// function btnClicker(resultName) {
-//   if ("two_up" == resultName) {
-//     document.getElementById("scissors").click();
-//     console.log(count++);
-//   }
-//   if ("fist" == resultName) {
-//     document.getElementById("rock").click();
-//     console.log(count++);
-//   }
-//   if ("four_up" == resultName) {
-//     document.getElementById("paper").click();
-//     console.log(count++);
-//   }
-// }
 
 function scrollWindow(x) {
   if ("thumbs_down" == x) {

@@ -52,13 +52,13 @@ footer {
   height: 50px;
 }
 /* additional config style  */
-.bg-color-main{
+.bgc-main{
 background-color: #242424;
 }
-.bg-color-main-lighten{
-  background-color: #4e4e4e;
+.bgc-main-lighten{
+  background-color: #9b9898;
   }
-.bg-color-transparent{
+.bgc-transparent{
 background-color: rgba(0, 0, 0, 0.1); 
 border-radius: 5px;
 }
@@ -96,4 +96,41 @@ background-repeat: no-repeat;
   height: 50px;
 }
 /* game 1 */
+.section .info {
+  background: rgb(10, 10, 10);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.info span,
+.info h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0px 10px;
+  color: white;
+}
+.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(41, 40, 40);
+  height: 220px;
+}
+.show i {
+  font-size: 100px;
+  color: orange;
+}
+button {
+  margin: 0 20px;
+  padding: 25px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgb(41, 40, 40);
+  font-size: 33px;
+  color: orange;
+}
+
+
 

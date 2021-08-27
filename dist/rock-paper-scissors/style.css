@@ -81,3 +81,30 @@ h2 {
     font-size: 33px;
     color: orange;
 }
+
+#video-container {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    right: 0;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#pose-video {
+    transform: scaleX(-1);
+}
+
+#pose-result {
+    margin-top: 75%;
+    font-size: 100px;
+    text-align: right;
+    padding: 20px 30px 0 0;
+}

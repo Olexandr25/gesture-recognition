@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     />
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+
     <title>FingerPose Example</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -34,5 +35,66 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
+
+    <title>FingerPose Example</title>
+    <link rel="shortcut icon" href="../assets/hand.png" type="image/png">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg-image-main page d-flex flex-column">
+      <header class="header d-flex justify-content-between bg-color-main">
+        <a href="#" class="text-decoration-none">
+          <h1 class="fw-bold text-light tx-shadow-md ps-5 py-4">GESTURES</h1>
+        </a>
+        <h3 class="p-4-extra m-0 text-light">scroll 👎👍</h3>
+      </header>
+      <div class="m-3 content bg-color-transparent">
+        <div class="div">
+          <div id="video-container" class="video-container">
+            <video id="pose-video" class="layer pose-video" playsinline></video>
+            <canvas id="pose-canvas" class="layer"></canvas>
+            <div id="pose-result" class="layer pose-result"></div>
+          </div> 
+        </div>
+        <div class="container-xxl"> 
+          <div class="row">
+            <div class="col fw-bold lh-lg align-middle text-light tx-shadow fs p-5">Play With Friends Just Hand Movement 👋</div>
+          </div>
+          <div class="row">
+            <div class="col fs-5 text-white">Navigation<hr></div>
+            <div class="col fs-5 text-white">Games<hr></div>
+          </div>
+          <div class="row">
+            <div class="col fs-5 text-light fw-light">
+              scroll up 👍
+            </div>
+            <div class="col fs-5 text-light fw-light">
+              rock ✊
+            </div>
+          </div>
+          <div class="row">
+            <div class="col fs-5 text-light fw-light">
+              scroll down 👎
+            </div>
+            <div class="col fs-5 text-light fw-light">
+              paper ✋
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="fs-4 text-light btn d-flex justify-content-end"> <a class="text-decoration-none text-light" href="./second_page.html">NEXT 👉</span></a></button>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <footer class="bg-color-main footer">
+        <div class="d-flex justify-content-around footer-content">
+            <p class="text-light fw-light fs-5 py-2">2021 © FractalAcademy</p>
+            <p class="text-light fw-light fs-5 py-2">GESTURES<p>
+            <img class="fractal_img" src="../assets/Symbol.svg" alt="FractalAcademy" />
+        </div>
+      </footer> 
+    </div>
+
   </body>
 </html>

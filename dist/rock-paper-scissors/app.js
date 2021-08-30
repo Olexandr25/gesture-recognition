@@ -7,7 +7,7 @@ const buttons = document.querySelectorAll('.selection button');
 const showIcon = document.querySelector('.show i');
 const computerShowIcon = document.querySelector('.computer i');
 // The randomClass array below this contains the rock,paper, and scissor Icon from font-awesome.
-const randomClasses = ["fas fa-hand-rock", "fas fa-hand-paper","fas fa-hand-scissors"];
+const randomClasses = ["fas fa-hand-rock", "fas fa-hand-paper","fas fa-hand-peace"];
 const text = document.getElementById('demo');
 const text2 = document.getElementById('demo2');
 

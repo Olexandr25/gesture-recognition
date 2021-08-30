@@ -107,7 +107,7 @@ async function main() {
     // ...and so on
     setTimeout(() => {
       estimateHands();
-    }, (20*1000) / config.video.fps);
+    }, 1000 / config.video.fps);
   };
 
   estimateHands();

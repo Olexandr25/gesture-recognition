@@ -99,6 +99,8 @@ async function main() {
         resultLayer.innerText = gestureStrings[result.name];
         scrollWindow(result.name);
         zoomWindow(result.name);
+        navigation(result.name);
+        main_page(result.name);
       }
     }
 
@@ -145,6 +147,18 @@ function drawPoint(ctx, x, y, r, color) {
   ctx.arc(x, y, r, 0, 2 * Math.PI);
   ctx.fillStyle = color;
   ctx.fill();
+}
+
+function navigation(name) {
+    if ('okay' == name){
+      document.getElementById('next').click();
+    }
+}
+
+function main_page(name) {
+  if ('love_you' == name){
+    document.getElementById('main_page').click();
+  }
 }
 
 function scrollWindow(x) {

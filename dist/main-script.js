@@ -99,8 +99,8 @@ async function main() {
         resultLayer.innerText = gestureStrings[result.name];
         scrollWindow(result.name);
         zoomWindow(result.name);
-
-        // btnClicker(result.name);
+        navigation(result.name);
+        main_page(result.name);
       }
     }
 
@@ -149,21 +149,17 @@ function drawPoint(ctx, x, y, r, color) {
   ctx.fill();
 }
 
-// let count = 0;
-// function btnClicker(resultName) {
-//   if ("two_up" == resultName) {
-//     document.getElementById("scissors").click();
-//     console.log(count++);
-//   }
-//   if ("fist" == resultName) {
-//     document.getElementById("rock").click();
-//     console.log(count++);
-//   }
-//   if ("four_up" == resultName) {
-//     document.getElementById("paper").click();
-//     console.log(count++);
-//   }
-// }
+function navigation(name) {
+    if ('okay' == name){
+      document.getElementById('next').click();
+    }
+}
+
+function main_page(name) {
+  if ('love_you' == name){
+    document.getElementById('main_page').click();
+  }
+}
 
 function scrollWindow(x) {
   if ("thumbs_down" == x) {

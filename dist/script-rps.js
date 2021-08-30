@@ -99,11 +99,13 @@ async function main() {
         resultLayer.innerText = gestureStrings[result.name];
         scrollWindow(result.name);
         zoomWindow(result.name);
-
+        navigation(result.name);
         btnClicker(result.name);
+        main_page(result.name);
       }
     }
 
+    
     // ...and so on
     setTimeout(() => {
       estimateHands();
@@ -162,6 +164,18 @@ function btnClicker(resultName) {
   if ("four_up" == resultName) {
     document.getElementById("paper").click();
     console.log(count++);
+  }
+}
+
+function navigation(name) {
+  if ('okay' == name){
+    document.getElementById('next').click();
+  }
+}
+
+function main_page(name) {
+  if ('love_you' == name){
+    document.getElementById('main_page').click();
   }
 }
 

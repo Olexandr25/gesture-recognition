@@ -13,6 +13,13 @@
     <title>Gesture</title>
     <link rel="shortcut icon" href="../assets/hand.png" type="image/png">
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      #myCanvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <div class="bgc-main-lighten page d-flex flex-column">
@@ -28,11 +35,12 @@
             <video id="pose-video" class="layer pose-video" playsinline></video>
             <canvas id="pose-canvas" class="layer"></canvas>
             <div id="pose-result" class="layer pose-result"></div>
-          </div> 
+          </div>
         </div>
-        <div class="container-xxl h"> 
+        <div class="container-xxl h">
             <!-- content  -->
-        </div> 
+        <canvas id="myCanvas" width="480" height="320"></canvas>
+        </div>
       </div>
       <!-- footer  -->
       <footer class="bgc-main footer">
@@ -43,6 +51,7 @@
         </div>
       </footer> 
     </div>
+    <script src="breakout/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
     <script src="fingerpose.js" type="text/javascript"></script>

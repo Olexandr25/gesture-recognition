@@ -1,39 +1,283 @@
-const dino = document.getElementById('dino');
-const cactus = document.getElementById('cactus');
-const btn_up = document.getElementById('btn_up');
+// const config = {
+//   video: {
+//     width: 640,
+//     height: 480,
+//     fps: 30,
+//   },
+// };
 
+// const landmarkColors = {
+//   thumb: "red",
+//   indexFinger: "blue",
+//   middleFinger: "yellow",
+//   ringFinger: "green",
+//   pinky: "pink",
+//   palmBase: "white",
+// };
 
-// document.addEventListener('onclick', function(event) {
-//     jump();
-// })
+// const gestureStrings = {
+//   thumbs_up: "👍",
+//   thumbs_down: "👎",
+//   phone: "🤙",
+//   finger_down: "👇",
+//   finger_left: "👈",
+//   finger_right: "👉",
+//   fist: "✊",
+//   okay: "👌",
+//   love_you: "🤟",
+//   two_down: "🐶",
+//   three_down: "🐱",
+//   four_down: "🦊",
+//   five_down: "🐸",
+//   one_up: "👆",
+//   two_up: "✌🏻",
+//   three_up: "🎲",
+//   four_up: "🎯",
+// };
 
-// function jump(resultName) {
-//     if (dino.classList != 'jump') {
-//         dino.classList.add('jump');
-//     } 
-//     setTimeout( function() {
-//         dino.classList.remove('jump')
-//     }, 300)
+// async function main() {
+//   const video = document.querySelector("#pose-video");
+//   const canvas = document.querySelector("#pose-canvas");
+//   const ctx = canvas.getContext("2d");
+
+//   const resultLayer = document.querySelector("#pose-result");
+
+//   const knownGestures = [
+//     fp.Gestures.ThumbsUpGesture,
+//     fp.Gestures.ThumbsDownGesture,
+//     fp.Gestures.PhoneGesture,
+//     fp.Gestures.FingerDownGesture,
+//     fp.Gestures.FingerLeftGesture,
+//     fp.Gestures.FingerRightGesture,
+//     fp.Gestures.FistGesture,
+//     fp.Gestures.OkayGesture,
+//     fp.Gestures.LoveYouGesture,
+//     fp.Gestures.TwoDown,
+//     fp.Gestures.ThreeDown,
+//     fp.Gestures.FourDown,
+//     fp.Gestures.FiveDown,
+//     fp.Gestures.OneUpGesture,
+//     fp.Gestures.TwoUpGesture,
+//     fp.Gestures.ThreeUpGesture,
+//     fp.Gestures.FourUpGesture,
+//   ];
+//   const GE = new fp.GestureEstimator(knownGestures);
+
+//   // load handpose model
+//   const model = await handpose.load();
+//   console.log("Handpose model loaded");
+
+//   // main estimation loop
+//   const estimateHands = async () => {
+//     // clear canvas overlay
+//     ctx.clearRect(0, 0, config.video.width, config.video.height);
+//     resultLayer.innerText = "";
+
+//     // get hand landmarks from video
+//     // Note: Handpose currently only detects one hand at a time
+//     // Therefore the maximum number of predictions is 1
+//     const predictions = await model.estimateHands(video, true);
+
+//     for (let i = 0; i < predictions.length; i++) {
+//       // draw colored dots at each predicted joint position
+//       for (let part in predictions[i].annotations) {
+//         for (let point of predictions[i].annotations[part]) {
+//           drawPoint(ctx, point[0], point[1], 3, landmarkColors[part]);
+//         }
+//       }
+
+//       // now estimate gestures based on landmarks
+//       // using a minimum confidence of 7.5 (out of 10)
+//       const est = GE.estimate(predictions[i].landmarks, 7.5);
+
+//       if (est.gestures.length > 0) {
+//         // find gesture with highest confidence
+//         let result = est.gestures.reduce((p, c) => {
+//           return p.confidence > c.confidence ? p : c;
+//         });
+
+//         resultLayer.innerText = gestureStrings[result.name];
+//         scrollWindow(result.name);
+//         zoomWindow(result.name);
+//         navigation(result.name);
+//         main_page(result.name);
+//       }
+//     }
+
+//     // ...and so on
+//     setTimeout(() => {
+//       estimateHands();
+//     }, 1000 / config.video.fps);
+//   };
+
+//   estimateHands();
+//   console.log("Starting predictions");
 // }
 
-function jump() {
-  if (dino.classList != 'jump') {
-    dino.classList.add('jump');
-  } 
-  setTimeout( function() {
-      dino.classList.remove('jump')
-  }, 300)
-}
+// async function initCamera(width, height, fps) {
+//   const constraints = {
+//     audio: false,
+//     video: {
+//       facingMode: "user",
+//       width: width,
+//       height: height,
+//       frameRate: {
+//         max: fps,
+//       },
+//     },
+//   };
 
-btn_up.onclick = jump;
+//   const video = document.querySelector("#pose-video");
+//   video.width = width;
+//   video.height = height;
+
+//   // get video stream
+//   const stream = await navigator.mediaDevices.getUserMedia(constraints);
+//   video.srcObject = stream;
+
+//   return new Promise((resolve) => {
+//     video.onloadedmetadata = () => {
+//       resolve(video);
+//     };
+//   });
+// }
+
+// function drawPoint(ctx, x, y, r, color) {
+//   ctx.beginPath();
+//   ctx.arc(x, y, r, 0, 2 * Math.PI);
+//   ctx.fillStyle = color;
+//   ctx.fill();
+// }
+
+// function navigation(name) {
+//     if ('okay' == name){
+//       document.getElementById('next').click();
+//     }
+// }
+
+// function main_page(name) {
+//   if ('love_you' == name){
+//     document.getElementById('main_page').click();
+//   }
+// }
+
+// function scrollWindow(x) {
+//   if ("thumbs_down" == x) {
+//     window.scrollBy(0, 100);
+//   }
+//   if ("thumbs_up" == x) {
+//     window.scrollBy(0, -100);
+//   }
+// }
+
+// size = 1;
+// function zoomWindow(x) {
+//   if ("finger_left" == x && size > 0.5) {
+//     size -= 0.05;
+//     document.body.style.zoom = size;
+//   }
+//   if ("finger_right" == x && size < 1.5) {
+//     size += 0.05;
+//     document.body.style.zoom = size;
+//   }
+// }
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const dino = document.querySelector('.dino')
+//   const game = document.querySelector('.game')
+//   const alert = document.getElementById('alert')
+//   let isJumping = false
+//   let gravity = 0.9
+//   let isGameOver = false
+
+//   function control(e) {
+//     if(e.keyCode === 32) {
+//       if (!isJumping) {
+//         isJumping = true
+//         jump()
+//       }
+//       jump()
+//     }
+//   }
+//   document.addEventListener('keyup', control)
+
+//   let position = 0
+//   function jump() {
+//     let count = 0
+//     let timerId = setInterval(function () {
+
+//       // move down 
+//       if (count === 15) {
+//         clearInterval(timerId)
+//         console.log('down')
+//         let downTimerId = setInterval(function () {
+//           if (count === 0) {
+//             clearInterval(downTimerId)
+//             isJumping = false
+//           }
+//           position -= 1
+//           count-- 
+//           position = position * gravity
+//           dino.style.bottom = position + 'px'
+//         }, 20);
+//       }
+
+//       //move on
+//       console.log('up')
+//       position +=30
+//       count++
+//       position = position * gravity
+//       dino.style.bottom = position + 'px'
+//       console.log(dino.style.bottom)
+//     },20)
+//   }
+
+//   function generateObstacles() {
+//     let randomTime = Math.random() * 4000
+//     let obstaclePosition = 1000
+//     const obstacle = document.createElement('div')
+//     if (!isGameOver) obstacle.classList.add('obstacle')
+//     game.appendChild(obstacle)
+//     obstacle.style.left = obstaclePosition + 'px'
+
+//     let timeId = setInterval(function(){
+//       if (obstaclePosition > 0 && obstaclePosition < 60 &&  position <60) {
+//         clearInterval(timeId)
+//         alert.innerHTML = 'game over'
+//         isGameOver = true
+//         while (game.firstChild) {
+//           game.removeChild(game.lastChild)
+//         }
+//       }
+
+//       obstaclePosition -= 10
+//       obstacle.style.left = obstaclePosition + 'px'
+//     },20)
+//     if (!isGameOver) setTimeout(generateObstacles, randomTime)
+//   }
+// generateObstacles()
+
+
+// })
+// window.addEventListener("DOMContentLoaded", () => {
+//   initCamera(config.video.width, config.video.height, config.video.fps).then(
+//     (video) => {
+//       video.play();
+//       video.addEventListener("loadeddata", (event) => {
+//         console.log("Camera is ready");
+//         main();
+//       });
+//     }
+//   );
+
+//   const canvas = document.querySelector("#pose-canvas");
+//   canvas.width = config.video.width;
+//   canvas.height = config.video.height;
+//   console.log("Canvas initialized");
+// });
 
 
 
-let isAlive = setInterval(function() {
-    let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
-    let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));   
 
-    if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
-        alert('You are lost')
-    }
-}, 10)
+

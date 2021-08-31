@@ -1,6 +1,39 @@
+# gesture - recognition
+
+## Version which were used in project
+- node - v14.17.3
+- npm - 6.14.13
+
+## Before using let's install all packages
+1. Installing all packages
+   1. **npm install**
+2. If you are not going to add gestures then you can skip this item 
+   1. **npm install --global webpack**
+3. run project
+   1. Open folder **dist**
+   2. Run **index.html**
 
 
-# fingerpose
+## Documentation for adding new gestures
+1. Go to folder **src/gestures**
+2. Create new file ~ **victory.js**
+3. Connect two files with logic of gestures
+   1. **FingerDescription**
+   2. **GestureDescription**
+4. Make new **variable**
+5. Give logic to this gesture for every finger
+   1. Below you can find instruction how you can add logic for every finger
+6. Export your variable of this gesture
+7. Use import in this folder **src/gestures/index.js**
+8. And write in export your name of importing file
+9. Next you need to run in terminal command line **webpack** for building file with last gesture
+10. Let's go to another place **dist/main-script.js**
+11. Write in array **gestureStrings** name of your gesture and add some emoji
+12. Last step go to another array below previous **knownGestures** and write name of your gesture which you exported from **src/gestures/index.js**
+
+#### After all this steps we can run our index.html and see our gesture on screen
+
+# fingerpose - library
 
 Finger pose classifier for hand landmarks detected by TensorFlow.js' [handpose](https://github.com/tensorflow/tfjs-models/tree/master/handpose) model. It can detect hand gestures like "Victory" ✌️or "Thumbs Up" 👍inside a webcam source picture. You can define additional hand gestures using [gesture descriptions](https://github.com/andypotato/fingerpose/tree/master/src/gestures). 
 

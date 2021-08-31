@@ -13,7 +13,6 @@ body {
   height: 240px;
   position: absolute;
   right: 0;
-  /* left: 85%; */
 }
 .layer {
   position: absolute;
@@ -43,6 +42,7 @@ body {
 }
 header{
   width: 100%;
+  height: 90px;
 }
 footer {
   left: 0;
@@ -60,10 +60,17 @@ background-color: #242424;
 .bgc-main-lighten{
   background-color: #fffffff8;
   }
+.bgc-main-darken{
+  background-color: #30313159;
+  }
 .bgc-transparent{
 background-color: rgba(0, 0, 0, 0.1); 
 border-radius: 5px;
 }
+.bgc-transparent-lighten{
+  background-color: rgba(229, 236, 213, 0.582); 
+  border-radius: 5px;
+  }
 .bg-image-main{
 background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/gesture.jpg);  
 background-size: cover;
@@ -76,7 +83,7 @@ background-repeat: no-repeat;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 .p-4-extra {
- padding: 29px;
+ padding: 25px;
 }
 .h {
   height: 100%;
@@ -126,7 +133,7 @@ background-repeat: no-repeat;
   font-size: 100px;
   color: orange;
 }
-button {
+.button_rps {
   margin: 0 20px;
   padding: 25px;
   border-radius: 50%;
@@ -137,6 +144,33 @@ button {
   font-size: 33px;
   color: orange;
 }
+/* rating  */
 
+.rate {
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid #eec357;
+  width: 50px;
+  height: 50px;
+}
+.rate:focus {
+  background-color: #eec357;
+}
 
+/* dino  */ 
 
+/* .dino {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: yellowgreen;
+  bottom: 0px;
+}
+
+.obstacle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  bottom: 0px;
+} */
